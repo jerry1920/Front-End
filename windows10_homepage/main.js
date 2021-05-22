@@ -16,3 +16,21 @@ setInterval(() =>{
     }
     time.textContent = hours + ":" + minutes + " " + period; 
 });
+
+
+function start_drawer(){
+    var show = document.getElementById("drawer-tray");
+    if(show.style.display !== "block"){
+        show.style.display = "block";
+    } else{
+        show.style.display = "none";
+    }
+}
+
+function show_sidebar(){
+    document.getElementById('windows-start-hover-menu').style.display = "block"; 
+}
+
+function hide_sidebar(){
+    document.getElementById('windows-start-hover-menu').style.display = "none"; 
+}
