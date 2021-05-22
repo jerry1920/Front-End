@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-color: red;  
+    position: relative;
+}
+                            /* Windows pannel */
+.windows-pannel{
+    position:fixed;
+    bottom: 0;
+    height: 35px;
+    width: 100vw;
+    background-color:#333;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+
+.window-logo{
+    border:0;
+    outline:0;
+    background-color:inherit;
+    color: #fff;
+}
+
+.windows-pannel:hover{
+    opacity: 10;
+}
+                            /* app icon */
+.app-icon{
+    height: 35px;
+    width: 84.5%;
+    overflow: hidden;
+    float: left;
+}
+
+.app-icon .bg-color:hover{
+    background-color: rgb(73, 71, 71);
+}
+
+.app-icon > .pd-app{
+    padding: 10px 10px;
+}
+.app-icon > i {
+    color: #ffff;
+}
+
+.app-icon > .window-logo:hover{
+    color: rgb(250, 59, 97);
+    
+}
+
+.app-icon .search{
+    transform: rotate(90deg);
+}
+
+.app-icon .bg-hover{
+    border-bottom: 2px solid rgb(250, 59, 97);
+    padding: 7px 10px;
+    font-size: 17px;
+}
+
+.app-icon .folder{
+    color: yellow;
+}
+
+.app-icon .chrome{
+    color: rgb(0, 204, 255);
+}
+
+.app-icon .store{
+    border: none !important;
+}
+                            /* System icon */
+.system-icon{
+    height: 35px;
+    width: 15.5%;
+    overflow:hidden;
+    float: right;
+}
+
+.system-icon  .pd-system{
+    padding: 10px 7px;
+}
+
+.system-icon i{
+    color: #ffff;
+    font-size: 15px;
+}
+
+.system-icon .btn-prps{
+    outline: 0;
+    border: 0;
+    background-color: #333;
+}
+
+.system-icon .bg-sys-color:hover{
+    background-color: rgb(73, 71, 71);
+}
+
+.wi-fi-con{
+    transform: rotate(-45deg);
+}
+
+.system-icon p{
+    color: #ffff;
+}
