@@ -101,7 +101,7 @@
     top: 0;
     left: 0;
     width: 250px;
-    height:93.7vh;
+    height:94.7vh;
     background-color: rgb(39, 37, 37);
     display:none;
 }
@@ -129,8 +129,14 @@
 }
 
 .icon-name{
-    font-family: 'KoHo', sans-serif;
-    font-size: 17px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+    color: #fff;
+}
+
+.hamburger-menu-name{
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
 }
 
 .sys-user-profile:hover{

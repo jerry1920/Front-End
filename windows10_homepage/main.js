@@ -29,6 +29,7 @@ function start_drawer(){
 
 function show_sidebar(){
     document.getElementById('windows-start-hover-menu').style.display = "block"; 
+    document.getElementById('windows-start-hover-menu').style["boxShadow"] = "5px 0 5px -4px rgba(0,0,0,0.7)"; 
 }
 
 function hide_sidebar(){
