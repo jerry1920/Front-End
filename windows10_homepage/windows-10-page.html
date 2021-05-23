@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="1.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <title>Windows 10 | Jerry</title>
 </head>
 <body>
@@ -17,7 +19,7 @@
                         <i class="fal fa-bars system-icon-pd" onclick="hide_sidebar()" ></i>
                         <div class="system-user-profile">
                             <button class="icon-btn">
-                                <img src="oc-logo.png" alt="user-name" height="20" width="20">
+                                <img src="img/oc-logo.png" alt="user-name" height="20" width="20">
                             </button>
                             <button class="icon-btn">
                                 <i class="fal fa-file document-icon-sys" style="user-select: auto;"></i>
@@ -43,7 +45,7 @@
                         <div class="system-user-profile sys-hover-profile">
                             <div class="sys-user-profile">
                                 <button class="icon-btn">
-                                    <img src="oc-logo.png" alt="user-name" height="20" width="20">
+                                    <img src="img/oc-logo.png" alt="user-name" height="20" width="20">
                                     &nbsp;&nbsp;<span class="icon-name" style="font-size:16px; color:#fff;">Jerry Parker</span><br>
                                 </button>
                                 
@@ -76,14 +78,208 @@
                     </div>
                 </div>
                 </div>
-                <div class="right-system-menu-tray">
+                                <!-- right-system-menu-tray -->
+                <div div class="right-system-menu-tray">
+                        <!-- recently used -->
                     <div class="software-drawer">
                         <div class="software-categories">Recently added</div>
                         <div class="soft-tray">
-                            <div class="logo-section"></div>
-                            <div class="soft-nam"></div>
+                            <div class="logo-section">
+                                <img src="img/Netflix.png" height="30" width="30" alt="netflix"> 
+                            </div>
+                            <div class="soft-nam">Netflix</div>
                         </div>
                     </div>
+                        <!-- Suggested -->
+                    <div class="software-drawer">
+                        <div class="software-categories">Suggested</div>
+                        <div class="soft-tray">
+                            <div class="logo-section">
+                                <img src="img/weather.png" height="30" width="30" alt="weather"> 
+                            </div>
+                            <div class="soft-nam">Weather</div>
+                        </div>
+                    </div>
+                        <!-- # -->
+                    <div class="software-drawer">
+                        <div class="hash-pd">#</div>
+                        <div class="soft-tray">
+                            <div class="logo-section">
+                                <img src="img/3dviewer.png" height="30" width="30" alt="3d Viewer"> 
+                            </div>
+                            <div class="soft-nam">3d Viewer</div>
+                        </div>
+                    </div>
+                        <!-- A -->
+                    <div class="software-drawer">
+                        <div class="hash-pd">A</div>
+                        <div class="soft-tray">
+                            <div class="logo-section">
+                                <img src="img/Microsoft-Access-Logo.png" height="25" width="35" alt="Access"> 
+                            </div><br>
+                            <div class="soft-nam">Access</div><br>
+                        </div>
+                    </div>
+                    <!-- sub-categories of A 2/5 -->
+                    <div class="soft-tray">
+                        <div class="logo-section">
+                            <img src="img/adobe-xs.png" height="30" width="30" alt="Adobe XD"> 
+                        </div>
+                        <div class="soft-nam">Adobe XD</div>
+                    </div>
+                    <!-- sub-categories of A 3/5 -->
+                    <div class="soft-tray">
+                        <div class="logo-section">
+                            <img src="img/Alarms-colorful-fluent-icon.png" height="30" width="30" alt="Alarm and Clock"> 
+                        </div>
+                        <div class="soft-nam">Alarms & Clock</div>
+                    </div>
+                    <!-- sub-categories of A 4/5 -->
+                    <div class="soft-tray">
+                        <div class="logo-section">
+                            <img src="img/prime-2.jpg" height="30" width="30" alt="Amazon prime videos"> 
+                        </div>
+                        <div class="soft-nam">Amazon Prime Videos</div>
+                    </div>
+                    <!-- sub-categories of A 5/5 -->
+                    <div class="soft-tray">
+                        <div class="logo-section">
+                            <img src="img/arduino-2.png" height="30" width="30" alt="Arduino"> 
+                        </div>
+                        <div class="soft-nam">Arduino</div>
+                    </div>
+                        <!-- B -->
+                    <div class="software-drawer" onclick="subCate_folder();">
+                        <div class="hash-pd">B</div>
+                        <div class="soft-tray">
+                            <div class="logo-section">
+                               <img src="img/folder.png" height="28" width="28" alt="Bing Wallpaper"> 
+                            </div>
+                            <div class="soft-nam">Bing Wallpaper</div>
+                            <span><i class="fal fa-angle-down down-arrow" id="down-arrow"></i></span>
+                        </div>
+                    </div>
+                    <!-- sub-categories of Bing Wallpaper Folder 1/1 -->
+                    <div class="soft-tray" id="folder_show" style="display:none;">
+                        <div class="sub-cate-folder">
+                            <img src="img/bing-logo.png" height="30" width="30" alt="Bing Wallpaper"> 
+                        </div>
+                        <div class="soft-nam">Bing Wallpaper</div>
+                    </div>
+                    <!-- sub-categories of B 2/3 -->
+                    <div class="soft-tray">
+                        <div class="logo-section">
+                            <img src="img/bittorrent.png" height="30" width="30" alt="Bit torrent"> 
+                        </div>
+                        <div class="soft-nam">Bit Torrent</div>
+                    </div>
+                    <!-- sub-categories of B 3/3 -->
+                    <div class="soft-tray">
+                        <div class="logo-section">
+                            <img src="img/bluestack.png" height="30" width="30" alt="Blue Stack"> 
+                        </div>
+                        <div class="soft-nam">BlueStack</div>
+                    </div>
+                        <!-- C -->
+                    <div class="software-drawer">
+                        <div class="hash-pd">C</div>
+                        <div class="soft-tray">
+                            <div class="logo-section">
+                                <img src="img/Windows-10-Calculator-.png" height="30" width="30" alt="Calculator"> 
+                            </div><br>
+                            <div class="soft-nam">Calculator</div><br>
+                        </div>
+                    </div>
+                    <!-- sub-categories of C 2/6 -->
+                    <div class="soft-tray">
+                        <div class="logo-section">
+                            <img src="img/Calendar-windows-10.png" height="30" width="30" alt="Calender"> 
+                        </div>
+                        <div class="soft-nam">Calender</div>
+                    </div>
+                    <!-- sub-categories of C 3/6 -->
+                    <div class="soft-tray">
+                        <div class="logo-section">
+                            <img src="img/Windows-10-Camera.png" height="30" width="30" alt="Camera"> 
+                        </div>
+                        <div class="soft-nam">Camera</div>
+                    </div>
+                    <!-- sub-categories of C 4/6 -->
+                    <div class="soft-tray" onclick="subCate_chrome_folder();">
+                        <div class="logo-section">
+                           <img src="img/folder.png" height="28" width="28" alt="Chrome Apps"> 
+                        </div>
+                        <div class="soft-nam">Chrome Apps</div>
+                        <span><i class="fal fa-angle-down down-arrow-chrome" id="down-arrow-chrome"></i></span>
+                    </div>
+                    
+                    <div class="sub-folder-cover-chrome" id="chrome_sub_folder_show" style="display: none">
+                    <!-- sub-categories of Chrome Apps Folder 1/5 -->
+                        <div class="soft-tray ">
+                            <div class="sub-cate-folder">
+                                <img src="img/discord.png" height="30" width="30" alt="Discord"> 
+                            </div>
+                            <div class="soft-nam">Discord</div>
+                        </div>
+                    <!-- sub-categories of Chrome Apps Folder 2/5 -->
+                        <div class="soft-tray">
+                            <div class="sub-cate-folder" >
+                                <img src="img/dcoder.png" height="30" width="30" alt="Dcoder"> 
+                            </div>
+                            <div class="soft-nam">Dcoder</div>
+                        </div>
+                    <!-- sub-categories of Chrome Apps Folder 3/5 -->
+                        <div class="soft-tray">
+                            <div class="sub-cate-folder" >
+                                <img src="img/Netflix.png" height="30" width="30" alt="Netflix"> 
+                            </div>
+                            <div class="soft-nam">Netflix</div>
+                        </div>
+                    <!-- sub-categories of Chrome Apps Folder 4/5 -->
+                        <div class="soft-tray">
+                            <div class="sub-cate-folder" >
+                                <img src="img/Spotify.png" height="30" width="30" alt="Spotify"> 
+                            </div>
+                            <div class="soft-nam">Spotify</div>
+                        </div>
+                    <!-- sub-categories of Chrome Apps Folder 5/5 -->
+                        <div class="soft-tray">
+                            <div class="sub-cate-folder" >
+                                <img src="img/Youtube.png" height="30" width="30" alt="Youtube"> 
+                            </div>
+                            <div class="soft-nam">Youtube</div>
+                        </div>
+                    </div>
+                    <!-- sub-categories of C 5/6 -->
+                    <div class="soft-tray" onclick="subCate_Conexant_folder();">
+                        <div class="logo-section">
+                           <img src="img/folder.png" height="28" width="28" alt="Conexant"> 
+                        </div>
+                        <div class="soft-nam">Conexant</div>
+                        <span><i class="fal fa-angle-down down-arrow-conexant" id="down-arrow-conexant"></i></span>
+                    </div>
+
+                    <div class="sub-folder-cover-conexant" id="conexant_sub_folder_show" style="display: none">
+                    <!-- sub-categories of Chrome Apps Folder 1/1 -->
+                        <div class="soft-tray ">
+                            <div class="sub-cate-folder">
+                                <img src="img/conexant.png" height="30" width="30" alt="Conexant"> 
+                            </div>
+                            <div class="soft-nam">Conexant</div>
+                        </div>
+                    </div>
+                    <!-- sub-categories of C 6/6 -->
+                    <div class="soft-tray">
+                        <div class="logo-section">
+                            <img src="img/cortana.png" height="25" width="25" alt="Cortana"> 
+                        </div>
+                        <div class="soft-nam">Cortana</div>
+                    </div>
+                    
+                    
+
+
+
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste odit repellendus possimus perferendis nulla aliquid velit consequuntur voluptate qui recusandae et, error, eveniet veritatis laboriosam culpa ullam. Molestiae, nam magni!
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste odit repellendus possimus perferendis nulla aliquid velit consequuntur voluptate qui recusandae et, error, eveniet veritatis laboriosam culpa ullam. Molestiae, nam magni!
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste odit repellendus possimus perferendis nulla aliquid velit consequuntur voluptate qui recusandae et, error, eveniet veritatis laboriosam culpa ullam. Molestiae, nam magni!

@@ -34,3 +34,40 @@ function show_sidebar(){
 function hide_sidebar(){
     document.getElementById('windows-start-hover-menu').style.display = "none"; 
 }
+
+
+function subCate_folder(){
+    var folderShow = document.getElementById('folder_show');
+    var arrow = document.getElementById('down-arrow');
+    if(folderShow.style.display == "none"){
+        folderShow.style.display = "flex";
+        arrow.style.transform =  'rotate(180deg)';
+    } else{
+        folderShow.style.display = "none";
+        arrow.style.transform =  'rotate(0deg)';
+    }
+}
+
+function subCate_chrome_folder(){
+    var folderShow = document.getElementById('chrome_sub_folder_show');
+    var arrow = document.getElementById('down-arrow-chrome');
+    if(folderShow.style.display == "none"){
+        folderShow.style.display = "block";
+        arrow.style.transform =  'rotate(180deg)';
+    } else{
+        folderShow.style.display = "none";
+        arrow.style.transform =  'rotate(0deg)';
+    }
+}
+
+function subCate_Conexant_folder(){
+    var folderShow = document.getElementById('conexant_sub_folder_show');
+    var arrow = document.getElementById('down-arrow-conexant');
+    if(folderShow.style.display == "none"){
+        folderShow.style.display = "block";
+        arrow.style.transform =  'rotate(180deg)';
+    } else{
+        folderShow.style.display = "none";
+        arrow.style.transform =  'rotate(0deg)';
+    }
+}
