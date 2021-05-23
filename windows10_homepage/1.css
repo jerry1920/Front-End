@@ -16,14 +16,12 @@
 .box-1{
     height: 94.7vh;
     width: 320px;
-    /* background-color:chartreuse; */
     transition:all 500ms ease-in-out;
 }
 
 .windows-start-drawer{
     position: relative;
 }
-
                             /* left-system-mennu */
 
 .left-system-menu{
@@ -353,4 +351,27 @@
     margin-left: 139.5px;
     font-size:17px;
     color:#fff;
+}
+.down-arrow-dolby{
+    margin-left: 160.5px;
+    font-size:17px;
+    color:#fff; 
+}
+
+.down-arrow-git{
+    margin-left: 175.5px;
+    font-size:17px;
+    color:#fff;
+}
+
+.down-arrow-github{
+    margin-left: 131px;
+    font-size:17px;
+    color:#fff
+}
+
+.period-apps{
+    font-family: 'Open Sans', sans-serif;
+    color:rgb(241, 108, 135);
+    font-weight: 600;
 }
