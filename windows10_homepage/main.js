@@ -9,7 +9,7 @@ setInterval(() =>{
         period = "PM";
         hours = hours - 12;
     }
-    if(hours < 12){
+    if(hours < 10){
        hours = "0" + hours;
     }
     if(hours == 0){
