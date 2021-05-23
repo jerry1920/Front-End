@@ -95,38 +95,6 @@
     background-color:#333;
 }
 
-.right-system-menu-tray{
-    float: right;
-    width: 260px;
-    height:94.7vh;
-    overflow-y: scroll;
-    background-color: rgb(39, 37, 37);
-}
-
-.right-system-menu-tray::-webkit-scrollbar{
-    width: 2px;
-    border-radius: 20px;
-  }
-
-  ::-webkit-scrollbar:hover{
-      width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #333; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: grey; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
-
                             /* windows start hover menu  */
 .windows-start-hover-menu{
     position:absolute;
@@ -204,6 +172,7 @@
 .app-icon > .pd-app{
     padding: 10px 10px;
 }
+
 .app-icon > i {
     color: #ffff;
 }
@@ -273,4 +242,51 @@
     content: "";
     clear: both;
     display: table;
+}
+
+                               /* right-system Menu */
+.right-system-menu-tray{
+    float: right;
+    width: 260px;
+    height:94.7vh;
+    overflow-y: scroll;
+    background-color: rgb(39, 37, 37);
+}
+.right-system-menu-tray::-webkit-scrollbar{
+                            
+  width: 2px;
+  border-radius: 20px;
+}
+::-webkit-scrollbar:hover{
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+                             /* software drawer */
+.software-drawer{
+    height: 80px;
+    width:100%;
+    background-color:aqua;
+}
+
+.software-categories{
+    padding:10px 4px;
+}
+
+.software-categories:hover{
+    
 }
