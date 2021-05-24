@@ -119,3 +119,76 @@ function subCate_github_folder(){
         arrow.style.transform =  'rotate(0deg)';
     }
 }
+
+// Add an active class in right-search-bar-header of Search bar-header Windows Pannel Left-Side
+
+var items = document.getElementsByClassName("item");
+for (var i=0; i< items.length; i++){
+    items[i].addEventListener("click", function(){
+        var currentLocation =document.getElementsByClassName("active");
+        currentLocation[0].className = currentLocation[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
+
+
+// More Option Show and Hide classes
+
+function subCate_more_options(){
+    var folderShow = document.getElementById('more-sub-option');
+    if(folderShow.style.display == "none"){
+        folderShow.style.display = "block";
+    } else{
+        folderShow.style.display = "none";
+    }
+}
+
+// Feedback form open close
+function feedback_form_open(){
+    document.getElementById('form-feedback-problem').style.display = "block";
+    
+}
+
+function feedback_form_Close(){
+    document.getElementById('form-feedback-problem').style.display = "none";
+}
+
+// search-bar-windows-pannel-left-side
+function searchbar_windows_panels(){
+    var subCate_searchbar = document.getElementById('search-bar-windows-pannel-left-side');
+    if(subCate_searchbar.style.display == "none"){
+        subCate_searchbar.style.display = "block";
+    } else{
+        subCate_searchbar.style.display = "none";
+    }
+}
+
+// option-3dot option show hide
+function option_show_hide(){
+    var optionShow= document.getElementById('option-3dot');
+    if(optionShow.style.display == "none"){
+        optionShow.style.display = "block";
+    } else{
+        optionShow.style.display = "none";
+    }
+}
+
+// user-profile-account-details hide and show
+function subCate_userProfile(){
+    var folderShow = document.getElementById('user-profile-account-details');
+    if(folderShow.style.display == "none"){
+        folderShow.style.display = "block";
+    } else{
+        folderShow.style.display = "none";
+    }
+}
+
+// System-Power-Icon-sub-categories hide show
+function subCate_Power_Option(){
+    var folderShow = document.getElementById('System-Power-Icon-sub-categories');
+    if(folderShow.style.display == "none"){
+        folderShow.style.display = "block";
+    } else{
+        folderShow.style.display = "none";
+    }
+}

@@ -36,7 +36,7 @@
                             <button class="icon-btn"> 
                                 <i class="fal fa-cog setting-btn"></i>
                             </button>
-                            <button class="icon-btn"> 
+                            <button class="icon-btn" > 
                                 <i class="fal fa-power-off power-btn"></i>
                             </button>
                         </div>
@@ -52,7 +52,7 @@
                             </div>
                                 <!--System-User-Profile-->
                             <div class="system-user-profile sys-hover-profile">
-                                <div class="sys-user-profile">
+                                <div class="sys-user-profile" onclick="subCate_userProfile();">
                                     <button class="icon-btn">
                                         <img src="img/oc-logo.png" alt="user-name" height="20" width="20">
                                         &nbsp;&nbsp;<span class="icon-name">Jerry Parker</span><br>
@@ -80,11 +80,47 @@
                                     </button>
                                 </div>
                                 <!--System-Power-Icon-->
-                                <div class="sys-user-profile">
+                                <div class="sys-user-profile" onclick="subCate_Power_Option();">
                                     <button class="icon-btn"> 
                                         <i class="fal fa-power-off power-btn"></i>
                                         &nbsp;&nbsp;<span class="icon-name">Power</span><br>
                                     </button>
+                                </div>
+                                <!-- user-profile-account-Details -->
+                                <div class="user-profile-account-details" id="user-profile-account-details" style="display:none;">
+                                    <div class="change-account-user">
+                                        <i class="fal fa-users-cog"></i>
+                                        &nbsp;&nbsp;<span>Change account settings</span>
+                                    </div>
+                                    <div class="change-account-user">
+                                        <i class="fal fa-lock"></i>
+                                        &nbsp;&nbsp;<span>Change account settings</span>
+                                    </div>
+                                    <div class="change-account-user">
+                                        <i class="fal fa-sign-out"></i>
+                                        &nbsp;&nbsp;<span>Change account settings</span>
+                                    </div>
+                                    <hr>
+                                    <div class=" admini-user">
+                                        <i class="fas fa-user-circle"></i>
+                                         <p>Administrator</p>
+                                    </div>
+                                </div>
+                                <!-- System-Power-Icon-sub-categories-->
+                                <div class="System-Power-Icon-sub-categories" id="System-Power-Icon-sub-categories" style="display:none;">
+                                    <div class="power-off">
+                                        <i class="fal fa-moon dir-change"></i>
+                                        &nbsp;&nbsp;<span>Sleep</span>
+                                    </div>
+                                    <div class="power-off">
+                                        <i class="fal fa-power-off"></i>
+                                        &nbsp;&nbsp;<span>Shut down</span>
+                                    </div>
+                                    <div class="power-off">
+                                        <i class="fal fa-redo dir-change"></i>
+                                        &nbsp;&nbsp;<span>Restart</span>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -474,6 +510,83 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Search bar Windows Pannel Left-Side -->
+        <div class="search-bar-windows-pannel-left-side" id="search-bar-windows-pannel-left-side" style="display:none;">
+            <!-- Search bar-header Windows Pannel Left-Side -->             
+            <div class="search-bar-header" id="search-bar-header">
+                <a class="item active" title="Find the most relevant results on this PC and the web">All</a>
+                <a class="item"  title="Find results in apps">Apps</a>
+                <a class="item"  title="Find results in documents">Documents</a>
+                <a class="item"  title="Find results in web">Web</a>
+                <a class="item" title="More filters" onclick="subCate_more_options();">More<span>&nbsp;&nbsp;<i class="fas fa-caret-down"></i></span></a>
+                <!-- right-search-bar-header -->
+                <div class="right-search-bar-header">
+                    <a class="right-icon" id="feedback_form" onclick="feedback_form_open();"><i class="far fa-comments" title="Give feedback"></i></a>
+                    <a class="right-icon" onclick="option_show_hide();"><i class="far fa-ellipsis-h " style="user-select: auto;" title="Options"></i></a>
+                </div>
+                <!-- More Sub-Option Search bar-header Windows Pannel Left-Side-->
+                <div class="more-sub-option" id="more-sub-option"  style="display:none">
+                    <ul>
+                        <li>Email</li>
+                        <li>Folders</li>
+                        <li>Music</li>
+                        <li>People</li>
+                        <li>Photos</li>
+                        <li>Settings</li>
+                        <li>Videos</li>
+                    </ul>
+                </div>
+                <!-- More Sub-Option Feedback-header Windows Pannel Right-Side  -->
+                <div class="form-feedback-problem" id="form-feedback-problem" style="display:none;">
+                    <div class="form-shadow">
+                        <div class="main-form-feedback">
+                            <h2>Send feedback to Microsoft</h2>
+                            <input class="radio-btn" type="radio" checked style="color:black";>
+                            <label>Ideas</label><br>
+                            <input class="radio-btn" type="radio" style="color:black";>
+                            <label>Likes</label><br>
+                            <input class="radio-btn" type="radio" style="color:black";>
+                            <label>Dislikes</label><br>
+                            <textarea  placeholder="Enter your feedback on Windows Search here. To protect your privacy,please don't include any personal information." ></textarea>
+                            <input class="radio-btn" type="checkbox"checked >
+                            <label>include a screenshot</label><br>
+                            <a class="radio-btn report-link" href="#">Report legal or privacy concern</a>
+                            <a class="radio-btn report-link" href="#">privacy statement</a>
+                            <a class="radio-btn report-link" href="#">Learn more</a>
+                            <button class="radio-btn submit-btn">Send</button>
+                            <button class="radio-btn cancel-btn" onclick="feedback_form_Close();">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <!--More Sub-Option last-Option-3dot-header Windows Pannel Right-Side   -->
+                <div class="option-3dot" id="option-3dot" style="display:none;">
+                    <h3>Connected accounts</h3>
+                    <p>jerryparker@gmail.com</p>
+                    <p>Work or school account</p>
+                    <hr>
+                    <div class="icon-tray-3dot">
+                        <div class="manage-account">
+                            <i class="fal fa-users-medical"></i>
+                            &nbsp;&nbsp;<span>Manage Accounts</span>
+                        </div>
+                        <div class="manage-account">
+                            <i class="fal fa-user-plus"></i>
+                            &nbsp;&nbsp;<span>Add a Microsoft account</span>
+                        </div>
+                        <div class="manage-account">
+                            <i class="fal fa-cog"></i>
+                            &nbsp;&nbsp;<span>Search settings</span>
+                        </div>
+                        <div class="manage-account">
+                            <i class="fal fa-folder-tree"></i>
+                            &nbsp;&nbsp;<span>Indexing options</span>
+                        </div>
+                        <div class="build-info">Build: 2021:05:22:51584523</div>
+                    </div>
+                </div>
+            </div>
+        </div>
                         <!-- Shortcut App Icon And Windows Pannel -->
         <div class="app-dashboard"></div>
                         <!-- Windows Pannel App -->
@@ -481,7 +594,7 @@
                         <!-- Windows Pannel App Icon Left-Side-->
             <div class="app-icon">
                 <button class="window-logo pd-app bg-color" title="Start" onclick="start_drawer()"><i class="fab fa-windows fa-lg"></i></button>
-                <i class="fal fa-search search bg-color pd-app" title="Type here to search"></i>
+                <i class="fal fa-search search bg-color pd-app" title="Type here to search" onclick="searchbar_windows_panels();"></i>
                 <i class="fas fa-folder folder bg-hover bg-color"></i>
                 <i class="fal fa-bags-shopping store bg-hover bg-color pd-app"></i>
                 <i class="fab fa-chrome chrome bg-hover bg-color "></i>
